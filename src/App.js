@@ -11,7 +11,24 @@ class App extends Component {
     clickedCards: []
   };
 
-  
+  addScore = () => {
+    this.setState({currentScore: this.state.currentScore + 1});
+    if (this.state.currentScore > this.state.highScore) {
+      this.setState({highScore: this.state.currentScore})
+    }
+  };
+
+  resetScore = () => {
+    this.setState({currentScore: 0})
+  };
+
+  checkArray = () => {
+    this.state.clickedCards.includes(this.props.name) ?
+    this.resetScore() :
+    this.addScore()
+  };
+
+
 
   render() {
     return (
@@ -35,6 +52,8 @@ class App extends Component {
               {this.state.cards.map( card => (
                 <CatCard
                 image={card.image}
+                name={card.name}
+                onClick={this.checkArray}
                 />
               ))}
             </div>

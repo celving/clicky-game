@@ -2,6 +2,8 @@ import React from "react";
 import "./style.css";
 
 function CatCard(props) {
+
+    
     return(
         <div className="card float-left">
             <div className="card-body">
