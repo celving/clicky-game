@@ -2,55 +2,55 @@
     {
         "id": 1,
         "name": "biscuits",
-        "image": "/img/biscuits.gif",
+        "image": "./img/biscuits.gif",
         "count": 0
     },
     {
         "id": 2,
         "name": "chicks",
-        "image": "/img/chicks.gif",
+        "image": "./img/chicks.gif",
         "count": 0
     },
     {
         "id:": 3,
         "name": "failure",
-        "image": "/img/failure.gif",
+        "image": "./img/failure.gif",
         "count": 0
     },
     {
         "id:": 4,
         "name": "mirror",
-        "image": "/img/mirror.gif",
+        "image": "./img/mirror.gif",
         "count": 0
     },
     {
         "id:": 5,
         "name": "shaqwiggle",
-        "image": "/img/shaqwiggle.gif",
+        "image": "./img/shaqwiggle.gif",
         "count": 0
     },
     {
         "id:": 6,
         "name": "sleepykitten",
-        "image": "/img/sleepykitten.gif",
+        "image": "./img/sleepykitten.gif",
         "count": 0
     },
     {
         "id:": 7,
         "name": "spaghetti",
-        "image": "/img/spaghetti.gif",
+        "image": "./img/spaghetti.gif",
         "count": 0
     },
     {
         "id:": 8,
         "name": "theolrazzledazzle",
-        "image": "/img/theolrazzledazzle.gif",
+        "image": "./img/theolrazzledazzle.gif",
         "count": 0
     },
     {
         "id:": 9,
         "name": "thud",
-        "image": "/img/thud.gif",
+        "image": "./img/thud.gif",
         "count": 0
     }
 ]
