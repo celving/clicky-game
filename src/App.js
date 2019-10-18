@@ -7,25 +7,38 @@ class App extends Component {
   state = {
     currentScore: 0,
     highScore: 0,
-    cards: cards,
-    clickedCards: []
+    cards: cards
   };
 
   addScore = () => {
     this.setState({currentScore: this.state.currentScore + 1});
+  };
+
+  resetGame = () => {
     if (this.state.currentScore > this.state.highScore) {
       this.setState({highScore: this.state.currentScore})
-    }
+    };
+    this.state.cards.forEach(cards => {
+      cards.count = 0;
+    });
+    this.setState({currentScore: 0});
   };
 
-  resetScore = () => {
-    this.setState({currentScore: 0})
-  };
-
-  checkArray = () => {
-    this.state.clickedCards.includes(this.props.name) ?
-    this.resetScore() :
-    this.addScore()
+  checkArray = id => {
+    console.log(this.state)
+    this.state.cards.find((item, index) => {
+      if (item.id === id) {
+        if (cards[index].count === 0) {
+          cards[index].count = 1;
+          this.addScore();
+          this.state.cards.sort(() => Math.random() - 0.5);
+          return true;
+        } else {
+          this.resetGame();
+        }
+      }
+      return false;
+    });
   };
 
 
@@ -51,9 +64,10 @@ class App extends Component {
             <div className="col-md-10 float-center justify-content-center">
               {this.state.cards.map( card => (
                 <CatCard
+                key={card.name}
                 image={card.image}
-                name={card.name}
-                onClick={this.checkArray}
+                id={card.id}
+                handleClick={this.checkArray}
                 />
               ))}
             </div>

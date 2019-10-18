@@ -5,7 +5,7 @@ function CatCard(props) {
 
     
     return(
-        <div className="card float-left">
+        <div onClick={() => props.handleClick(props.id)} className="card float-left">
             <div className="card-body">
                 <img className="card-img" alt={""} src= {props.image} />
             </div>
